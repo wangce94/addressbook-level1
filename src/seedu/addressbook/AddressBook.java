@@ -456,23 +456,7 @@ public class AddressBook {
         showToUser(personsFound);
         return getMessageForPersonsDisplayedSummary(personsFound);
     }
-    /*
-     * Capitalizes first letter of the string
-     */
-    private String capitalizeFirstLetter(String stringToBeCapitalized) {
-	return Character.toUpperCase(stringToBeCapitalized.charAt(0)) + stringToBeCapitalized.substring(1);
-    }
-    
-    /*
-     * Capitalizes each string in a given arraylist of String
-     */
-    private ArrayList<String> capitalizeEachWord(ArrayList<String> stringsToBeCapitalized) {
-	ArrayList<String> capitalizedString = new ArrayList<String>();
-	for(String i : stringsToBeCapitalized) {
-	    capitalizedString.add(capitalizeFirstLetter(i));
-	}
-	return capitalizedString;
-    }
+
 
     /**
      * Constructs a feedback message to summarise an operation that displayed a listing of persons.
@@ -1186,6 +1170,23 @@ public class AddressBook {
      */
     private static ArrayList<String> splitByWhitespace(String toSplit) {
         return new ArrayList<>(Arrays.asList(toSplit.trim().split("\\s+")));
+    }
+    /*
+     * Capitalizes first letter of the string
+     */
+    private String capitalizeFirstLetter(String stringToBeCapitalized) {
+	return Character.toUpperCase(stringToBeCapitalized.charAt(0)) + stringToBeCapitalized.substring(1);
+    }
+    
+    /*
+     * Capitalizes each string in a given arraylist of String
+     */
+    private ArrayList<String> capitalizeEachWord(ArrayList<String> stringsToBeCapitalized) {
+	ArrayList<String> capitalizedString = new ArrayList<String>();
+	for(String i : stringsToBeCapitalized) {
+	    capitalizedString.add(capitalizeFirstLetter(i));
+	}
+	return capitalizedString;
     }
 
 }
