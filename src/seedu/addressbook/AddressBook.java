@@ -455,22 +455,9 @@ public class AddressBook {
         showToUser(personsFound);
         return getMessageForPersonsDisplayedSummary(personsFound);
     }
-    /*
-     * Capitalizes first letter of the string
-     */
+    
     private String capitalizeFirstLetter(String stringToBeCapitalized) {
 	return Character.toUpperCase(stringToBeCapitalized.charAt(0)) + stringToBeCapitalized.substring(1);
-    }
-    
-    /*
-     * Capitalizes each string in a given arraylist of String
-     */
-    private ArrayList<String> capitalizeEachWord(ArrayList<String> stringsToBeCapitalized) {
-	ArrayList<String> capitalizedString = new ArrayList<String>();
-	for(String i : stringsToBeCapitalized) {
-	    capitalizedString.add(capitalizeFirstLetter(i));
-	}
-	return capitalizedString;
     }
 
     /**
