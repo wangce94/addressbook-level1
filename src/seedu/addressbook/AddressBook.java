@@ -455,6 +455,10 @@ public class AddressBook {
         showToUser(personsFound);
         return getMessageForPersonsDisplayedSummary(personsFound);
     }
+    
+    private String capitalizeFirstLetter(String stringToBeCapitalized) {
+	return Character.toUpperCase(stringToBeCapitalized.charAt(0)) + stringToBeCapitalized.substring(1);
+    }
 
     /**
      * Constructs a feedback message to summarise an operation that displayed a listing of persons.
