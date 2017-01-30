@@ -492,6 +492,12 @@ public class AddressBook {
     private static Set<String> extractKeywordsFromFindPersonArgs(String findPersonCommandArgs) {
         return new HashSet<>(splitByWhitespace(findPersonCommandArgs.trim()));
     }
+    /*
+     * Extracts keywords from command and capitalizes the first letter of each string
+     */
+    private static Set<String> extractCapitalizedKeywordsFromFindPersonArgs(String findPersonCommandArgs) {
+        return new HashSet<>(capitalizeEachWord(splitByWhitespace(findPersonCommandArgs.trim())));
+    }
 
     /**
      * Retrieves all persons in the full model whose names contain some of the specified keywords.
